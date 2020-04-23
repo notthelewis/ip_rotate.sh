@@ -15,8 +15,6 @@ do
 i=0
     for i in ${!ips[@]}; do
         ifconfig eth0 ${ips[$i]} up
-        ifconfig eth0
-
         if [ $i -gt 2 ];then
             ip route add default via ---.---.---.--- dev eth0
         else
